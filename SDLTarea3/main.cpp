@@ -16,6 +16,7 @@ SDL_Event Event;
 SDL_Texture *background,*character;
 SDL_Rect rect_background,rect_character;
 Mix_Music *gMusic = NULL;
+Mix_Chunk *gMedium = NULL;
 
 using namespace std;
 
@@ -49,12 +50,13 @@ int main( int argc, char* args[] )
     rect_background.w = w;
     rect_background.h = h;
 
-    character = IMG_LoadTexture(renderer, "Personaje/mfron1.png");
-    SDL_QueryTexture(character, NULL, NULL, &w, &h);
-    rect_character.x = 0;
-    rect_character.y = 100;
-    rect_character.w = w;
-    rect_character.h = h;
+      //Segundo Personaje
+//    character = IMG_LoadTexture(renderer, "Personaje/mfron1.png");
+//    SDL_QueryTexture(character, NULL, NULL, &w, &h);
+//    rect_character.x = 0;
+//    rect_character.y = 100;
+//    rect_character.w = w;
+//    rect_character.h = h;
 
     Jugador jugador(renderer);
 
@@ -78,6 +80,7 @@ int main( int argc, char* args[] )
         while(SDL_PollEvent(&Event))
         {
             gMusic = Mix_LoadMUS("Most Wanted (Original).wav");
+            gMedium = Mix_LoadWAV("enemy_dead_21.wav");
 
             if(Event.type == SDL_QUIT)
             {
@@ -106,6 +109,10 @@ int main( int argc, char* args[] )
                             Mix_PauseMusic();
                         }
                     }
+                    case SDLK_f:
+                        Mix_PlayChannel(-1, gMedium, 0);
+                        break;
+
                     break;
 
                     case SDLK_0:
@@ -116,26 +123,26 @@ int main( int argc, char* args[] )
         }
 
         //Second Player
-        const Uint8* currentKeyStates = SDL_GetKeyboardState( NULL );
+//        const Uint8* currentKeyStates = SDL_GetKeyboardState( NULL );
+//
+//        if( currentKeyStates[ SDL_SCANCODE_D ] )
+//        {
+//            rect_character.x+=1;
+//        }
+//        if( currentKeyStates[ SDL_SCANCODE_A ] )
+//        {
+//            rect_character.x-=1;
+//        }
+//        if( currentKeyStates[ SDL_SCANCODE_W ] )
+//        {
+//            rect_character.y-=1;
+//        }
+//        if( currentKeyStates[ SDL_SCANCODE_S ] )
+//        {
+//            rect_character.y+=1;
+//        }
 
-        if( currentKeyStates[ SDL_SCANCODE_D ] )
-        {
-            rect_character.x+=1;
-        }
-        if( currentKeyStates[ SDL_SCANCODE_A ] )
-        {
-            rect_character.x-=1;
-        }
-        if( currentKeyStates[ SDL_SCANCODE_W ] )
-        {
-            rect_character.y-=1;
-        }
-        if( currentKeyStates[ SDL_SCANCODE_S ] )
-        {
-            rect_character.y+=1;
-        }
-
-        //SDL_Delay(17-(SDL_GetTicks()-last_frame));
+        //SDL_Delay(17-(SDL_GetTicks()-last_frame))
         double diferencia = SDL_GetTicks()-last_frame;
         cout<<"Diferencia: "<<diferencia<<endl;
         double ajuste = 17 - diferencia;

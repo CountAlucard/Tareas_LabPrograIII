@@ -32,11 +32,11 @@ Humunculus::~Humunculus()
 
 void Humunculus::logica()
 {
-    if(jugador->y<y)
+    if(jugador->y+10<y)
     {
         state="up";
     }
-    if(jugador->y>y)
+    if(jugador->y-10>y)
     {
         state="down";
     }

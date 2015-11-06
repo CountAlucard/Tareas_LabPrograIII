@@ -5,7 +5,7 @@
 1446322944 /home/carlos/Documents/CodeBlocks_Projects/Tareas_LabPrograIII/SDLTarea3/Jugador.h
 	"Personaje.h"
 
-1446507311 source:/home/carlos/Documents/CodeBlocks_Projects/Tareas_LabPrograIII/SDLTarea3/main.cpp
+1446830787 source:/home/carlos/Documents/CodeBlocks_Projects/Tareas_LabPrograIII/SDLTarea3/main.cpp
 	<SDL2/SDL.h>
 	<SDL2/SDL_image.h>
 	<iostream>
@@ -34,7 +34,7 @@
 1446322846 source:/home/carlos/Documents/CodeBlocks_Projects/Tareas_LabPrograIII/SDLTarea3/Personaje.cpp
 	"Personaje.h"
 
-1446503719 source:/home/carlos/Documents/CodeBlocks_Projects/Tareas_LabPrograIII/SDLTarea3/Humunculus.cpp
+1446657965 source:/home/carlos/Documents/CodeBlocks_Projects/Tareas_LabPrograIII/SDLTarea3/Humunculus.cpp
 	"Humunculus.h"
 
 1446504322 /home/carlos/Documents/CodeBlocks_Projects/Tareas_LabPrograIII/SDLTarea3/Humunculus.h
@@ -43,10 +43,10 @@
 1446505752 /home/carlos/Documents/CodeBlocks_Projects/Tareas_LabPrograIII/SDLTarea3/Skeleton.h
 	"Enemigo.h"
 
-1446508666 source:/home/carlos/Documents/CodeBlocks_Projects/Tareas_LabPrograIII/SDLTarea3/Skeleton.cpp
+1446658216 source:/home/carlos/Documents/CodeBlocks_Projects/Tareas_LabPrograIII/SDLTarea3/Skeleton.cpp
 	"Skeleton.h"
 
-1446509100 source:/home/carlos/Documents/CodeBlocks_Projects/Tareas_LabPrograIII/SDLTarea3/Devil.cpp
+1446658010 source:/home/carlos/Documents/CodeBlocks_Projects/Tareas_LabPrograIII/SDLTarea3/Devil.cpp
 	"Devil.h"
 
 1446507341 /home/carlos/Documents/CodeBlocks_Projects/Tareas_LabPrograIII/SDLTarea3/Devil.h

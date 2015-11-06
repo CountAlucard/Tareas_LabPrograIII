@@ -32,11 +32,11 @@ Devil::~Devil()
 
 void Devil::logica()
 {
-    if(jugador->x>x)
+    if(jugador->x-10>x)
     {
         state="right";
     }
-    if(jugador->x<x)
+    if(jugador->x+10<x)
     {
         state="left";
     }

@@ -33,18 +33,19 @@ Skeleton::~Skeleton()
 void Skeleton::logica()
 {
 
-    if(jugador->y<y)
+    if(jugador->y+10<y)
     {
         state="up";
     }
-    if(jugador->y>y)
+    if(jugador->y-10>y)
     {
         state="down";
     }
-    if(jugador->x<x)
+    if(jugador->x+10<x)
     {
         x-=velocity;
-    }else
+    }
+    if(jugador->x-10>x)
         x+=velocity;
 
     if(state=="up")
